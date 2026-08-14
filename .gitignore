@@ -1,0 +1,30 @@
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+*.venv
+
+# IDE / Editor configuration
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userossc
+*.sln
+*.docstates
+
+# Project-specific outputs
+prediction.png
+prediction_*.png
+
+# Word/PDF Templates and Reports (Optional)
+# If you wish to exclude raw PDF/Word files from Git, uncomment the lines below:
+# *.pdf
+# *.docx
