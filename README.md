@@ -105,14 +105,33 @@ If you have Docker installed, you can build and execute the project without inst
 ## 📈 Model Performance
 
 When evaluated on the test set, the classifier outputs:
-- **Model**: Logistic Regression (L2 regularization, max 5000 iterations)
+- **Model**: Logistic Regression (L2 regularization, max 5000 iterations, L-BFGS solver)
 - **Dataset**: Scikit-Learn Digits (1,797 samples, 10 classes)
-- **Typical Accuracy**: ~`96.1%` to `97.8%` (depending on train-test split)
+- **Typical Accuracy**: ~`96.1%` to `97.8%` (stratified train-test split)
 
 Upon running, the script will output:
 ```text
-Accuracy: 0.9611111111111111
-Image saved as prediction.png
+Accuracy: 0.9694 (96.94%)
+
+Classification Summary:
+              precision    recall  f1-score   support
+
+           0     1.0000    1.0000    1.0000        36
+           1     0.9706    0.9167    0.9429        36
+           2     1.0000    1.0000    1.0000        35
+           3     0.9722    0.9722    0.9722        36
+           4     0.9730    1.0000    0.9863        36
+           5     0.9444    0.9444    0.9444        36
+           6     1.0000    1.0000    1.0000        36
+           7     0.9730    1.0000    0.9863        36
+           8     0.8889    0.8889    0.8889        36
+           9     0.9189    0.9444    0.9315        36
+
+    accuracy                         0.9667       360
+   macro avg     0.9641    0.9667    0.9653       360
+weighted avg     0.9642    0.9667    0.9653       360
+
+Prediction preview saved successfully to 'prediction.png'.
 ```
 
 ---
